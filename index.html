@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Mood Diary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="login-section" class="centered-container">
+    <div class="auth-container">
+      <h1>Mood Diary</h1>
+      <p>Track your mood and reflect on your day.</p>
+      <div id="login-form">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" placeholder="Enter your username">
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter your password">
+        <button id="login-btn">Login</button>
+        <p>Don't have an account? <span id="signup-link">Sign Up</span></p>
+      </div>
+      <div id="signup-form" style="display: none;">
+        <h2>Create Account</h2>
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" placeholder="Choose a username">
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" placeholder="Create a password">
+        <button id="signup-btn">Sign Up</button>
+        <p>Already have an account? <span id="login-link">Login</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Diary Section -->
+  <div id="diary-section" class="centered-container" style="display: none;">
+    <div class="diary-container">
+      <h1>Interactive Mood Diary</h1>
+      
+      <!-- Calendar input added here -->
+      <div class="calendar-container">
+        <label for="calendar">Select Date:</label>
+        <input type="date" id="calendar" class="calendar">
+      </div>
+
+      <div class="form-section">
+        <label for="mood">Select Your Mood:</label>
+        <select id="mood">
+          <option value="">--Choose--</option>
+          <option value="Happy">😊 Happy</option>
+          <option value="Sad">😢 Sad</option>
+          <option value="Stressed">😰 Stressed</option>
+          <option value="Calm">😌 Calm</option>
+        </select>
+        <label for="journal">Write About Your Day:</label>
+        <textarea id="journal" placeholder="What made you feel this way?"></textarea>
+        <button id="submit-btn">Add Entry</button>
+      </div>
+      <h2>Your Mood Entries</h2>
+      <ul id="entries-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
